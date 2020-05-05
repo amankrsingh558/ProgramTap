@@ -1,0 +1,4 @@
+practical/c/e1/submissions/abhi123456/q2/code.c: In function 'main':
+practical/c/e1/submissions/abhi123456/q2/code.c:8:1: error: expected ';' before 'printf'
+ printf("%d",a-b);
+ ^

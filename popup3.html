@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="window.location.reload()" id="next2">Click  here</button>
+	
+<script type="text/javascript">
+
+	var windowName = 'userConsole'; 
+
+var popUp = window.open('/popup-page.php', windowName, 'width=100, height=100, left=24, top=24, scrollbars, resizable');
+if (popUp == null || typeof(popUp)=='undefined') { 	
+	alert('Please disable your pop-up blocker and click the "Open" link again.'); 
+} 
+else { 	
+	popUp.close();
+	window.location.replace('exampg.html');
+	
+}
+
+
+
+
+</script>
+
+</body>
+</html>

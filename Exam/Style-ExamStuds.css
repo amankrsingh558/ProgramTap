@@ -1,0 +1,15 @@
+.parent-container{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.container-left{
+	padding-right:  50px;
+	padding-left: 20px;
+	background: #fff;
+}
+.container-right{
+	padding-right:  50px;
+	padding-left: 40px;
+	background: #eee;
+}

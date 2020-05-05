@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<?php include_once("theConnection.php");
+session_start();
+$_SESSION['ex']=1;
+
+?>
+
+<html>
+<head>
+	<title><#ProgramTap></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap2.min.css">
+<style>
+#table1{
+
+
+background-color:rgb(92, 92, 61,0.3);
+
+	
+}
+</style>
+</head>
+<body>
+	<?php include './header.php'; ?>
+<CENTER><B style="font-size:18px;">EXAM LIST<B></CENTER>
+	<div class="container">
+		<a href="AddQues.php"><input type="button" value="New Exam" class="btn btn-primary"></a>
+		
+
+       </div>
+       <div class="clearfix"></div></br>
+
+       <div class="container" id="table">
+       		<table class="table table-bordered table-responsive" id="table1">
+       			<tr >
+       			
+       			<th style="text-align: center">Exam Name</th>
+       			<th style="text-align: center">Duration</th>
+       			
+       			<th style="text-align: center">Req. Ques.</th>
+       			<th style="text-align: center">Available Ques.</th>
+       			
+       			<th style="text-align: center">Date</th>
+				<th style="text-align: center">Status</th>
+       			
+       		</tr>
+			
+			
+				<?php 
+				$today = date("Y-m-d");
+				
+	$qrryy="select * from exam ";
+	$getval=$con->query($qrryy);
+	$p=0;
+	  while($roww = $getval->fetch_row()){  
+       
+	   $date=$roww[3];
+	   
+
+
+	   
+		?>
+	   <tr>
+	     <td style="text-align: center;font-weight:normal;" onclick="" name="col" ><?php echo "$roww[2]"; ?></td>
+		  <td  style="text-align: center;font-weight:normal;"onclick=")" name="col" ><?php echo "$roww[8]"; ?></td>
+		    <td style="text-align: center;font-weight:normal;" onclick="" name="col" ><?php echo "$roww[4]"; ?></td>
+		    <td style="text-align: center;font-weight:normal;" onclick="" name="col" ><?php   $result=mysqli_query($con,"select count(*) as no from mcq where eid='$roww[1]'");
+			  while($row=mysqli_fetch_assoc($result))
+	                 {
+		              $nofsub=$row ["no"];       
+                      echo $nofsub;   
+	                 } ?>
+					 
+					 </td>
+			  <td style="text-align: center;font-weight:normal;" onclick="" name="col" ><?php echo "$roww[3]"; ?></td>
+			  
+			  <td>
+			  <?php
+               if($nofsub<$roww[4]){
+				?>
+
+                <button type="button"  onclick="add('<?php echo $roww[1]; ?>')" id="bt"  value="Schedule Exam" class="btn btn-primary" style="background-color:red;">Add Question</button>
+				
+					
+				<?php	
+				}
+				
+			
+			  
+			  
+			   elseif($date>$today)
+			  {
+			     if($roww[9]==1)
+			  {?>
+			  <button type="button"  onclick="" id="bt"  value="Schedule Exam" class="btn btn-primary" style="background-color:green;">Scheduled</button>
+				
+			  <?php }
+			      else{
+					  ?>
+					  <button type="button"  onclick="fetch(this)" id="bt"  value="Schedule Exam" class="btn btn-primary" style="">Shedule Exam</button>
+				<?php  }
+			   
+				
+			   }
+
+			  else {
+				  if($roww[9]==0){
+					  ?>
+					  <button type="button"  onclick="fetch(this)" id="bt"  value="Schedule Exam" class="btn btn-primary" style="">Shedule Exam</button>
+				 <?php }
+				 else {
+					 echo "Completed";
+					 }
+				  ?>
+				  	
+			  <?php }?>
+			  </td>
+		 </tr>
+	   <?php
+	  
+//$date = "2010-01-21";
+
+
+	  
+} 
+?>
+			
+			
+			
+			
+			
+			
+       		
+       		<?php
+       		/*$query="select * from exam";*/
+       		//$query="select DISTINCT e.eid,e.date,e.noq,e.duration,se.e_status from exam e join s_exam se ON (e.eid = se.eid)";
+       		//$crud->examview($query);
+       		?>
+       		
+       		</table>
+       </div>
+
+</body>
+
+<script>
+var k=0;
+function fetch(u){
+	    k=u.parentNode.parentNode.cells[0].textContent.toString();
+	window.location.replace('schedulexam2.php?val='+k);
+}
+function add(u){
+	
+	window.location.replace('addNewSet.php?val='+u);
+}
+
+</script>
+
+
+</html>

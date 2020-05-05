@@ -1,0 +1,38 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Sit on top */
+	margin-top:200px;
+	margin-left:500px;
+    padding: 1px; /* Location of the box */
+border-radius:5px;
+    width: 25%; /* Full width */
+    height: 25%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,25,0,0.9); /* Fallback color */
+
+}
+
+
+
+/* The Close Button */
+#close {
+   
+    float: right;
+	margin:0px;
+   
+    font-weight: bold;
+}
+#yesbtn {
+	margin-left:31%;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

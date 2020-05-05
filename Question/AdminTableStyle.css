@@ -1,0 +1,78 @@
+
+
+.demo div { 
+    
+    height:75px;
+    line-height: 60px;
+    font-family: "Century Gothic", "Helvetica", sans-serif;
+    font-size: 90px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 60px; 
+    margin-right: 60px; 
+}
+.demo1 { 
+    color: #111;
+    text-shadow: 0px 3px 1px rgba(255,255,255,.5); 
+}
+
+.qq:active, .aa:active, .rop:active{
+	color:aqua;
+}
+
+.qq{
+	text-align:left;
+	font-size:30px;
+	color:red;
+	background-color:transparent;
+	
+}
+.tble {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 800px;
+}
+
+.tble td, #customers th {
+    border: 1px solid #eee;
+    padding: 8px;
+}
+
+.tble tr:nth-child(even){background-color:white;}
+.tble tr:nth-child(odd){background-color: white;}
+.tble tr:hover {background-color: #eee;}
+
+.tble th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.aa{
+	font-size:20px;
+	color:green;
+	background-color:transparent;
+	
+}
+#sid{
+	text-align:center;
+	border:3px solid #eee;
+	color:green;
+	width:500px;
+	font-size:30px;
+	font-weight:bold;
+}
+
+.vac{
+	height:7px;
+	border-top:2px solid #eee;
+}
+.rop:hover{
+	cursor:pointer;
+}
+table{
+	border:2px solid #eee;
+	 border-collapse: collapse;
+}

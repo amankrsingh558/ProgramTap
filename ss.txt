@@ -1,0 +1,57 @@
+   <form id="log" action="#">
+      	    	<div style="margin-top: -10px; border-bottom:1px solid black;">
+      	    	<span style="color:black;font-weight: bold;font-size: 20px;">Sign in</span>
+      	    	<span style="float:right;font-size: 12px;margin-right: 12px;"><a href="#"><button type="button" data-toggle="modal" data-target="#exampleModal3" style="border: none; background: none; color: inherit;padding: 0;font: inherit;cursor: pointer;outline: inherit;" data-dismiss="modal">Forgot password?</button></a></span>
+      	        </div>
+      	    	<img  class="img img-responsive img-log" src="1.png">
+      	    	<div class="form-group">
+      	    		<label style="font-weight: bold;color: white;">College Roll no.</label>
+      	    		<input type="text" name="uroll" class="form-control" placeholder="Enter College Roll no.">
+      	    	</div>
+      	    	<div class="form-group">
+      	    		<label style="font-weight: bold;color: white;">Password</label>
+      	    		<input type="password" name="upass" class="form-control" placeholder="Enter Password">
+      	    	</div>
+      	    	<div class="checkbox">
+      	    		<label style="font-weight: bold;color: white;"><input type="checkbox">Remember me!</label>
+      	    	</div>
+      	    	<button type="submit" class="btn btn-success btn-block">Login</button>
+      	    	<span style="font-size: 15px;color: white;">Don't have an Account?<a href="#forgot" style="font-weight: bold;font-size: 15px;"><button type="button" data-toggle="modal" data-target="#exampleModal2" style="border: none; background: none; color: inherit;padding: 0;font: inherit;cursor: pointer;outline: inherit;" data-dismiss="modal"><i class="fas fa-user-plus"></i>Sign Up here</button></a></span>
+      	    </form>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			  <form id="log" action="#">
+      	    	<div style="margin-top: -10px; border-bottom:1px solid black;">
+      	    	<span style="color:black;font-weight: bold;font-size: 20px;">Create an account</span>
+      	        </div>
+      	    		<label style="font-weight: bold;color: white;">College Roll no.</label>
+      	    		<input type="text" name="uroll" class="form-control" placeholder="Enter College Roll no.">
+      	    
+      	    		<label style="font-weight: bold;color: white;">Username</label>
+      	    		<input type="text" name="uname" class="form-control" placeholder="Enter Username">
+      	    		<label style="font-weight: bold;color: white;">Email</label>
+      	    		<input type="email" name="umail" class="form-control" placeholder="Enter Email id">
+      	    		<label style="font-weight: bold;color: white;">Password</label>
+      	    		<input type="password" name="upass" class="form-control" placeholder="Enter Password">
+      	    		<label style="font-weight: bold;color: white;">Confirm Password</label>
+      	    		<input type="password" name="upass" class="form-control" placeholder="Enter re-password">
+      	    
+
+      	    	    <div class="checkbox">
+      	    		<label style="font-weight: bold;color: white;"><input type="checkbox">I agree</label>
+      	    	    </div>
+      	    	<button type="submit" class="btn btn-success btn-block">Login</button>
+      	    	<span style="font-size: 15px;color: white;">already have an Account<a href="#Login" style="font-weight: bold;font-size: 15px;"><button type="button" data-toggle="modal" data-target="#exampleModal1" style="border: none; background: none; color: inherit;padding: 0;font: inherit;cursor: pointer;outline: inherit;" data-dismiss="modal"><i class="fas fa-sign-in-alt"></i>Log in</button></a></span>
+      	    </form>
